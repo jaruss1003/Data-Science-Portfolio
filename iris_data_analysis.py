@@ -84,7 +84,7 @@ plt.show()
 
 # Plot and save the confusion matrix for Random Forest
 plt.figure(figsize=(6, 5))
-sns.heatmap(conf_matrix_rf, annot=True, fmt="d", cmap="Blues", xticklabels=model.classes_, yticklabels=model.classes_)
+sns.heatmap(conf_matrix_rf, annot=True, fmt="d", cmap="Blues", xticklabels=rf_model.classes_, yticklabels=rf_model.classes_)
 plt.title('Random Forest Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
