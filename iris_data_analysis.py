@@ -75,3 +75,50 @@ plt.savefig("pairplot.png")
 plt.close()
 
 print("\nPlots saved as 'feature_histograms.png' and 'pairplot.png'")
+
+
+# 1. Data Preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Splitting the data into features (X) and target variable (y)
+X = df.drop('species', axis=1)  # Features
+y = df['species']  # Target variable
+
+# Splitting the dataset into training (70%) and testing (30%) sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Standardizing the features
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# 2. Model Building
+from sklearn.linear_model import LogisticRegression
+
+# Initialize the logistic regression model
+model = LogisticRegression(max_iter=200)
+
+# Train the model on the training data
+model.fit(X_train, y_train)
+
+# 3. Model Evaluation
+from sklearn.metrics import classification_report, confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Predict the labels for the test set
+y_pred = model.predict(X_test)
+
+# Print the classification report
+print("Classification Report:\n", classification_report(y_test, y_pred))
+
+# Confusion Matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+# Plot the confusion matrix
+sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues", xticklabels=model.classes_, yticklabels=model.classes_)
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.show()
