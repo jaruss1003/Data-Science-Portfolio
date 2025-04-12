@@ -8,17 +8,45 @@ This repository is where I will upload projects related to Data Science and AI. 
 
 ## Projects
 
-### 1. Iris Data Analysis
+# Iris Dataset Analysis
 
-This is a beginner-level data science project that analyzes the classic Iris flower dataset. The goal is to explore the dataset using Python libraries like `pandas`, `seaborn`, and `matplotlib`, and visualize relationships between different features.
+This project is a beginner-friendly data science analysis of the classic **Iris flower dataset**. It includes data exploration, visualization, and basic machine learning models to classify flower species based on measurements.
 
-**Skills Practiced:**
-- Data loading and cleaning
-- Exploratory data analysis (EDA)
-- Data visualization
+## Project Goals
 
-**Tools Used:**
-- Python
-- Pandas
-- Seaborn
-- Matplotlib
+- Perform exploratory data analysis (EDA) on the Iris dataset.
+- Visualize feature relationships and distributions.
+- Train and evaluate machine learning models for classification.
+
+## Contents
+
+- `iris_data_analysis.py` — The main script containing all analysis steps.
+- `feature_histograms.png` — Histogram of each feature.
+- `pairplot.png` — Pairplot showing feature relationships by species.
+- `confusion_matrix_rf.png` — Confusion matrix from Random Forest classifier.
+
+## Steps Performed
+
+1. **Data Loading and Exploration**
+   - Used Seaborn’s built-in Iris dataset.
+   - Checked dataset structure, missing values, and basic statistics.
+
+2. **Data Visualization**
+   - Created histograms and pairplots to understand feature distributions.
+   - Generated a heatmap to show feature correlations.
+
+3. **Modeling**
+   - **Logistic Regression**
+     - Scaled features using `StandardScaler`.
+     - Evaluated performance with classification report and confusion matrix.
+   - **Random Forest Classifier**
+     - No feature scaling required.
+     - Visualized predictions with a confusion matrix.
+     - Achieved high classification accuracy.
+
+## How to Run
+
+1. Clone the repository or download the files.
+2. Make sure you have Python and the required libraries:
+   ```bash
+   pip install pandas seaborn matplotlib scikit-learn
