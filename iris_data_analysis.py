@@ -122,3 +122,37 @@ plt.title('Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.show()
+
+# Splitting the dataset into training and testing sets
+X = data.drop('species', axis=1)  # Features (sepal_length, sepal_width, petal_length, petal_width)
+y = data['species']  # Target variable (species)
+
+# Train-test split (80% training, 20% testing)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Importing the Random Forest model
+from sklearn.ensemble import RandomForestClassifier
+
+# Initializing and training the model
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# Evaluating the model's accuracy
+accuracy = model.score(X_test, y_test)
+print(f"Model accuracy: {accuracy:.2f}")
+
+# Making predictions
+y_pred = model.predict(X_test)
+
+# Confusion matrix and classification report
+from sklearn.metrics import confusion_matrix, classification_report
+
+# Confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix:")
+print(conf_matrix)
+
+# Classification report
+class_report = classification_report(y_test, y_pred)
+print("Classification Report:")
+print(class_report)
