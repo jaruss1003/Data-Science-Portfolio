@@ -1,24 +1,15 @@
 # Data Science Portfolio
 
-This repository is where I will upload projects related to Data Science and AI. Currently, I am working on Python-based analysis and machine-learning models.
-
-**Technologies used:** Python, Pandas, NumPy, Scikit-learn
+Welcome to my data science portfolio! This repository showcases my journey as I build technical skills in data analysis, machine learning, and predictive modeling — all aimed at supporting my long-term goal of working in national security and technology innovation.
 
 ---
 
 ## Projects
 
-### 1. Iris Data Analysis
+### [Iris Classification](./iris_classification)
+A beginner-friendly machine learning project using the classic Iris dataset. It includes data exploration, visualizations, and two classification models: Logistic Regression and Random Forest.  
+**Skills practiced:** Data cleaning, visualization, model building, evaluation.
 
-This is a beginner-level data science project that analyzes the classic Iris flower dataset. The goal is to explore the dataset using Python libraries like `pandas`, `seaborn`, and `matplotlib`, and visualize relationships between different features.
+---
 
-**Skills Practiced:**
-- Data loading and cleaning
-- Exploratory data analysis (EDA)
-- Data visualization
-
-**Tools Used:**
-- Python
-- Pandas
-- Seaborn
-- Matplotlib
+More projects coming soon!
