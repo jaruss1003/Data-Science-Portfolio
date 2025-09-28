@@ -7,7 +7,7 @@ Welcome to my data science portfolio! This repository showcases my journey as I 
 ## Projects
 
 ### [Iris Classification](./iris_classification)
-A beginner-friendly machine learning project using the classic Iris dataset. It includes data exploration, visualizations, and two classification models: Logistic Regression and Random Forest.  
+An AI guided beginner-friendly machine learning project using the classic Iris dataset. It includes data exploration, visualizations, and two classification models: Logistic Regression and Random Forest.  
 **Skills practiced:** Data cleaning, visualization, model building, evaluation.
 
 ---
