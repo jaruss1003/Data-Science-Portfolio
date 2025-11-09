@@ -15,7 +15,17 @@ games['season'] = games['date'].dt.year
 
 
 #Aggregate Team Stats per Game
+hitter = hitters.groupby(['team'], ['game'], as_index=False).agg({ 
+'OBP': 'mean'
+'SLG': 'mean'
+'K': 'sum'
+'BB': 'sum'
+})
 
+pitcher = pitchers.groupby(['team'], ['game'], as_index=False).agg({
+'ERA': 'mean'
+'K': 'sum'
+'BB': 'sum'
 
 # Features and target
 X = df[['away-score', 'home-score', 'Total Bases - Away', 'Walks Issued - Home', 'Strikeouts Thrown - Away']]
