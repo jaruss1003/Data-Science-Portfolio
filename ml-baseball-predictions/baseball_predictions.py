@@ -1,19 +1,21 @@
 import pandas as pd
-
-# Load your dataset
-df = pd.read_csv('cleaned_data/cleaned_games.csv')
-
-# Create target variable: 1 if away team wins, 0 if home team wins
-df['winner'] = (df['away-score'] > df['home-score']).astype(int)
-print(df[['away-score', 'home-score', 'winner']].head())
-# Now you're ready to select features and build a model!
-# Check correlations with the winner
-correlations = df.corr(numeric_only=True)['winner'].sort_values(ascending=False)
-print("Correlation with 'winner':\n", correlations)
-
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
+
+
+#Loading Datasets
+games = pd.read_excel('data/cleaned_games')
+hitters = pd.read_excel('data/cleaned_hittersByGame')
+pitching = pd.read_excel('data/pitchersByGame')
+
+# Ensure dates and extract season
+games['date'] = pd.to_datetime(games['date'], errors='coerce')
+games['season'] = games['date'].dt.year
+
+
+#Aggregate Team Stats per Game
+
 
 # Features and target
 X = df[['away-score', 'home-score', 'Total Bases - Away', 'Walks Issued - Home', 'Strikeouts Thrown - Away']]
