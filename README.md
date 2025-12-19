@@ -6,11 +6,11 @@ Welcome to my data science portfolio! This repository showcases my journey as I 
 
 ## Projects
 
-### [Iris Classification](./iris_classification)
+### [Iris Classification](./projects/iris_classification)
 An AI guided beginner-friendly machine learning project using the classic Iris dataset. It includes data exploration, visualizations, and two classification models: Logistic Regression and Random Forest.  
 **Skills practiced:** Data cleaning, visualization, model building, evaluation.
 
-### [ML Baseball Game Outcome Prediction](./ml-baseball-predictions)
+### [ML Baseball Game Outcome Prediction](./projects/ml_baseball_prediction)
 A machine learning project that forecasts game outcomes using historical data from the 2016–2021 seasons. Work in progress, with future plans to expand to real-time prediction once the basic model predicting outcomes of games from 2016–21 is complete.  
 **Skills practiced:** Data preprocessing, feature engineering, model training and evaluation, predictive analytics.
 
