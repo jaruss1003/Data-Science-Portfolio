@@ -1,6 +1,8 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
 
 # ------------------------------
 # Load datasets
@@ -117,15 +119,20 @@ if 'wins' not in diffs.columns:
     raise KeyError("The 'wins' column is missing in the differentials DataFrame after merge.")
 
 # ------------------------------
-# Correlation with wins
+# Standardize Data and Correlate with wins
 # ------------------------------
-cols_to_corr = [
+cols_to_scale = [
     'OBP_diff', 'SLG_diff', 'ERA_diff',
-    'K_diff_hitters', 'K_diff_pitchers', 'BB_diff_pitchers', 'wins'
+    'K_diff_hitters', 'K_diff_pitchers', 'BB_diff_pitchers'
 ]
 
+diffs_scaled = diffs.copy()
+diffs_scaled[cols_to_scale] = sc.fit_transform(diffs_scaled[cols_to_scale])
+
+cols_to_corr = cols_to_scale + ['wins']
+
 # Compute correlation matrix
-corr_matrix = diffs[cols_to_corr].corr()
+corr_matrix = diffs_scaled[cols_to_corr].corr()
 corr_with_wins = corr_matrix['wins'].drop('wins')
 
 # Print correlation results
