@@ -5,9 +5,10 @@ from sklearn.metrics import accuracy_score, classification_report
 
 
 #Loading Datasets
-games = pd.read_excel('cleaned_data/cleaned_games.xlsx')
-hitters = pd.read_excel('cleaned_data/cleaned_hittersByGame.xlsx')
-pitching = pd.read_excel('cleaned_data/cleaned_pitchersByGame.xlsx')
+# Load datasets — go up one level from code/ to the project root
+games = pd.read_excel('../cleaned_data/cleaned_games.xlsx')
+hitters = pd.read_excel('../cleaned_data/cleaned_hittersByGame.xlsx')
+pitchers = pd.read_excel('../cleaned_data/cleaned_pitchersByGame.xlsx')
 
 # Ensure dates and extract season
 games['date'] = pd.to_datetime(games['date'], errors='coerce')
@@ -16,15 +17,15 @@ games['season'] = games['date'].dt.year
 
 #Aggregate Team Stats per Game
 hitter = hitters.groupby(['team','game'], as_index=False).agg({ 
-'OBP': 'mean'
-'SLG': 'mean'
-'K': 'sum'
+'OBP': 'mean',
+'SLG': 'mean',
+'K': 'sum',
 'BB': 'sum'
 })
 
 pitcher = pitchers.groupby(['team','game'], as_index=False).agg({
-'ERA': 'mean'
-'K': 'sum'
+'ERA': 'mean',
+'K': 'sum',
 'BB': 'sum'
 })
 
