@@ -49,7 +49,7 @@ total_missing = 0
 for file in files:
     file_path = os.path.join(data_dir, file)
     if file.endswith('.xlsx'):
-        df = pd.read_excel(file_path)
+        df = pd.read_excel(file_path, engine="openpyxl")
     elif file.endswith('.csv'):
         df = pd.read_csv(file_path, low_memory=False)
     rows, missing = check_data_quality(df, file)
