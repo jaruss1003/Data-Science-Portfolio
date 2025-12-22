@@ -20,7 +20,7 @@ All features used in the baseline model were computed using information availabl
 
  \- Data exploration and visualization (correlation heatmap of features vs. home team wins)
  
- \-Feature engineering and computation of differentials  
+ \- Feature engineering and computation of differentials  
   (e.g., `ERA_diff`, `BB_diff_pitchers`, `OBP_diff`, `errors_diff`)
   
  \- Data preprocessing: cleaning, encoding, and handling missing values
