@@ -2,6 +2,15 @@
 
 This project uses machine learning to predict the outcomes of Major League Baseball (MLB) games based on historical data. The goal is to build a baseline classification model that predicts whether a team will win or lose using features like team and game statistics.
 
+## Dataset
+The data used in this project comes from publically available Major League Baseball game logs and statistics. 
+	- Historical MLB game and team-level data (2016-2021)
+		- Includes game outcomes, team statistics, pitching metrics, and error totals
+
+Dataset Source: 
+https://www.kaggle.com/datasets/josephvm/mlb-game-data
+
+
 ## Features
 	-	Data exploration and visualization (correlation heatmap of features vs. home team wins)
 	-	Feature engineering and computation of differentials (e.g., ERA_diff, BB_diff_pitchers, OBP_diff, errors_diff)
@@ -23,20 +32,28 @@ Future work: Random Forest and additional models for improved predictive perform
 	2.	Add your dataset to the data/ folder
 	3.	Run the scripts in code/:
 
-## Clean Data and Validate
-python code/clean_all_data.py 
-python code/validate_clean.py 
+## Clean Data and Validate (Clean data will be placed into cleaned_data folder)
+```bash
+python3 clean_all_data.py 
+```
+```bash
+python3 validate_clean.py 
+```
 
 # Compute features
+```bash
 python code/compute-features.py
+``` 
 
 # Explore model data
+```bash
 python code/explore-model-data.py
+```
 
-# Train baseline model
+# Train baseline model (Visual outputs will be saved in the plots/ folder)
+```bash
 python code/baseball_predictions.py
-
-Visual outputs will be saved in the plots/ folder
+```
 
 ## Status
 
