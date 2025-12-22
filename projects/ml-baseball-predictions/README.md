@@ -1,29 +1,54 @@
-# MLB Game Outcome Predictor
+## ML MLB Game Outcome Predictor
 
-This project uses machine learning to predict the outcomes of Major League Baseball (MLB) games based on historical data. The goal is to build a basic classification model that predicts whether a team will win or lose using features like team statistics, starting pitchers, and game location.
+This project uses machine learning to predict the outcomes of Major League Baseball (MLB) games based on historical data. The goal is to build a baseline classification model that predicts whether a team will win or lose using features like team and game statistics.
 
-## Project Goals
-- Load and explore historical MLB game data
-- Preprocess the data (cleaning, encoding, feature selection)
-- Train a machine learning model (e.g., Logistic Regression or Random Forest)
-- Evaluate the model’s performance with accuracy metrics and visualizations
+## Features
+	-	Data exploration and visualization (correlation heatmap of features vs. home team wins)
+	-	Feature engineering and computation of differentials (e.g., ERA_diff, BB_diff_pitchers, OBP_diff, errors_diff)
+	-	Data preprocessing: cleaning, encoding, and handling missing values
+	-	Model training and evaluation using Logistic Regression
+	-	Output of model coefficients to understand feature importance
 
-## Folder Structure
-- `baseball_predictions.py` — Main script for data analysis and modeling
-- `data/` — Contains the dataset (`mlb_games.csv`)
-- `outputs/` — Stores generated plots, confusion matrices, or model results
+## Models
+	-	Logistic Regression with standardized inputs
+Future work: Random Forest and additional models for improved predictive performance
+
+## Outputs
+	-	Feature importance and model coefficients (Feature Coefficients)
+    - 	Accuracy and classification report on test set
+	-	Correlation heatmap (correlation_matrix.png) of features vs. home team wins
 
 ## Getting Started
-1. Clone this repository
-2. Add your dataset to the `data/` folder
-3. Run the `baseball_predictions.py` script to begin training
+	1.	Clone this repository
+	2.	Add your dataset to the data/ folder
+	3.	Run the scripts in code/:
+
+## Clean Data
+python code/clean_all_data.py 
+
+# Compute features
+python code/compute-features.py
+
+# Explore model data
+python code/explore-model-data.py
+
+# Train baseline model
+python code/baseball_predictions.py
+
+Visual outputs will be saved in the plots/ folder
 
 ## Status
-**In Progress** — Currently in the early stages of development and experimentation.
 
-## Requirements
-- Python 3.x
-- pandas
-- seaborn
-- matplotlib
-- scikit-learn
+Baseline Complete — Logistic Regression model predicts home team wins using 2016–2021 data
+
+Future goals include:
+	-	Incorporating player-level data and rosters
+	-	Real-time predictions with updated statistics
+	-	Additional models and ensemble methods for improved accuracy
+
+Requirements
+	-	Python 3.x
+	-	pandas
+	-	seaborn
+	-	matplotlib
+	-	scikit-learn
