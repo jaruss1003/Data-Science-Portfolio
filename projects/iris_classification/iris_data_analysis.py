@@ -7,6 +7,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+plots_dir = os.path.join(script_dir, "plots")
+if not os.path.exists(plots_dir):
+    os.makedirs(plots_dir)
+
 
 # Load the Iris dataset
 df = sns.load_dataset('iris')
@@ -29,12 +36,12 @@ print(df['species'].value_counts())
 df.hist(figsize=(10, 8), edgecolor='black')
 plt.suptitle("Feature Distributions", fontsize=16)
 plt.tight_layout()
-plt.savefig("feature_histograms.png")
+plt.savefig(os.path.join(plots_dir,"feature_histograms.png"))
 plt.close()
 
 # Plot 2: Pairplot
 sns.pairplot(df, hue='species')
-plt.savefig("pairplot.png")
+plt.savefig(os.path.join(plots_dir,"pairplot.png"))
 plt.close()
 print("\nPlots saved as 'feature_histograms.png' and 'pairplot.png'")
 
@@ -89,7 +96,7 @@ plt.title('Random Forest Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.tight_layout()
-plt.savefig("confusion_matrix_rf.png")
+plt.savefig(os.path.join(plots_dir,"confusion_matrix_rf.png"))
 plt.close()
 
 print("Confusion matrix saved as 'confusion_matrix_rf.png'")
