@@ -79,4 +79,4 @@ Future goals include:
 	- pandas
 	- seaborn
 	- matplotlib
-	-	scikit-learn
+	- scikit-learn
