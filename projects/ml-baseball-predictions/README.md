@@ -6,8 +6,8 @@ This project uses machine learning to predict the outcomes of Major League Baseb
 
 The data used in this project comes from publicly available Major League Baseball game logs and statistics:
 
- - Historical MLB game and team-level data (2016–2021)
- - Includes game outcomes, team statistics, pitching metrics, and error totals
+Historical MLB game and team-level data (2016–2021)
+Includes game outcomes, team statistics, pitching metrics, and error totals
 
 Dataset source:
 https://www.kaggle.com/datasets/josephvm/mlb-game-data
