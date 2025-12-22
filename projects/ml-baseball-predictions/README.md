@@ -23,8 +23,9 @@ Future work: Random Forest and additional models for improved predictive perform
 	2.	Add your dataset to the data/ folder
 	3.	Run the scripts in code/:
 
-## Clean Data
+## Clean Data and Validate
 python code/clean_all_data.py 
+python code/validate_clean.py 
 
 # Compute features
 python code/compute-features.py
