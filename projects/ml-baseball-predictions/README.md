@@ -6,8 +6,8 @@ This project uses machine learning to predict the outcomes of Major League Baseb
 
 The data used in this project comes from publicly available Major League Baseball game logs and statistics.
 
- - Historical MLB game and team-level data (2016–2021)
- - Includes game outcomes, team statistics, pitching metrics, and error totals
+\ - Historical MLB game and team-level data (2016–2021)
+\ - Includes game outcomes, team statistics, pitching metrics, and error totals
 
 **Dataset source:**  
 https://www.kaggle.com/datasets/josephvm/mlb-game-data
@@ -17,26 +17,26 @@ All features used in the baseline model were computed using information availabl
 
 ## Features
 
- - Data exploration and visualization (correlation heatmap of features vs. home team wins)
- -Feature engineering and computation of differentials  
+\ - Data exploration and visualization (correlation heatmap of features vs. home team wins)
+\ -Feature engineering and computation of differentials  
   (e.g., `ERA_diff`, `BB_diff_pitchers`, `OBP_diff`, `errors_diff`)
- - Data preprocessing: cleaning, encoding, and handling missing values
- - Model training and evaluation using Logistic Regression
- - Output of model coefficients to understand feature importance
+\ - Data preprocessing: cleaning, encoding, and handling missing values
+\ - Model training and evaluation using Logistic Regression
+\ - Output of model coefficients to understand feature importance
 
 ## Models
 
- - **Logistic Regression** with standardized inputs
+\ - **Logistic Regression** with standardized inputs
 
 Future work:
- - Random Forest
- - Additional models for improved predictive performance
+\ - Random Forest
+\ - Additional models for improved predictive performance
 
 ## Outputs
 
- - Feature importance and model coefficients
- - Accuracy and classification report on test set
- - Correlation heatmap (`correlation_matrix.png`) of features vs. home team wins
+\ - Feature importance and model coefficients
+\ - Accuracy and classification report on test set
+\ - Correlation heatmap (`correlation_matrix.png`) of features vs. home team wins
 
 ## Getting Started
 
@@ -70,13 +70,13 @@ python3 baseball_predictions.py ```
 Baseline Complete — Logistic Regression model predicts home team wins using 2016–2021 data.
 
 Future goals include:
-  - Incorporating player-level data and rosters
-  - Real-time predictions with updated statistics
-  - Additional models and ensemble methods for improved accuracy
+\  - Incorporating player-level data and rosters
+\  - Real-time predictions with updated statistics
+\  - Additional models and ensemble methods for improved accuracy
 
 ## Requirements
-	- Python 3.x
-	- pandas
-	- seaborn
-	- matplotlib
-	- scikit-learn
+\ - Python 3.x
+\ - pandas
+\ - seaborn
+\ - matplotlib
+\ - scikit-learn
