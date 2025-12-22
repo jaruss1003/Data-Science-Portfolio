@@ -47,27 +47,30 @@ Future work:
 ## Clean and validate data
 ```bash
 python3 clean_all_data.py
-python3 validate_clean.py ```
+python3 validate_clean.py 
+```
 
 ## Compute Features 
 ```bash
-python3 compute-features.py ```
+python3 compute-features.py
+```
 
 ## Explore Model Data 
 ```bash
-python3 explore-model-data.py ```
+python3 explore-model-data.py
+```
 
 ## Train Baseline Model 
 ```bash
 python3 baseball_predictions.py ```
-
+```
 
 ## Status
 
 Baseline Complete — Logistic Regression model predicts home team wins using 2016–2021 data.
 
 Future goals include:
- - Incorporating player-level data and rosters
+  - Incorporating player-level data and rosters
 	- Real-time predictions with updated statistics
 	- Additional models and ensemble methods for improved accuracy
 
