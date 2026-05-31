@@ -1,18 +1,20 @@
-# Data Science Portfolio
+Applied Machine Learning
 
-Welcome to my data science portfolio! This repository showcases my journey as I build technical skills in data analysis, machine learning, and predictive modeling — all aimed at supporting my long-term goal of working in national security and technology innovation.
+This repository contains work related to applied machine learning and computational modeling.
 
----
+It serves as a workspace for developing and organizing projects in data-driven methods, predictive modeling, and machine learning systems.
 
-## Projects
+⸻
 
-### [Iris Classification](./projects/iris_classification)
-An AI guided beginner-friendly machine learning project using the classic Iris dataset. It includes data exploration, visualizations, and two classification models: Logistic Regression and Random Forest.  
-**Skills practiced:** Data cleaning, visualization, model building, evaluation.
+Focus Areas
 
-### [ML MLB Game Outcome Predictor](./projects/ml-baseball-predictions)
-A machine learning project that forecasts Major League Baseball (MLB) game outcomes using historical data from the 2016–2021 seasons. Work in progress, with future plans to expand to real-time prediction once the basic model predicting outcomes of games from 2016–21 is complete.
-**Skills practiced:** Data preprocessing, feature engineering, model training and evaluation, predictive analytics.
+* Machine Learning
+* Artificial Intelligence
+* Biomedical AI
+* Computational Neuroscience
 
+⸻
 
-More projects coming soon!
+Projects
+
+This repository is currently under development. Projects will be added as they are completed.
