@@ -6,6 +6,7 @@ This directory serves as the central hub for all my homework assignments and pro
 
 ### 📝 Homework & Assignments
 All homework notebooks are organized in the homework/ directory.
+
 HW1.ipynb - Homework 1: Initial neural network implementations.
 (Future HW notebooks will be added here)
 
