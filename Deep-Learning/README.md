@@ -13,6 +13,7 @@ HW1.ipynb - Homework 1: Initial neural network implementations.
 
 ### 🚀 Projects
 All major course projects will be organized in the projects/ directory.
+
 (Future deep learning project folders will be added here)
 
 ## 🛠️ Project Environment Setup
