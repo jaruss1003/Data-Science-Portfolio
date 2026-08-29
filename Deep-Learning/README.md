@@ -23,4 +23,4 @@ source .venv/bin/activate
 ```
 
 ## 📦 Foundational Tooling
-*   `ipykernel` (VS Code local notebook communication engine)
+*   `ipykernel` (VS Code local notebook communication engine) 
